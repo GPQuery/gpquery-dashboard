@@ -1,0 +1,149 @@
+<!doctype html>
+<html class="no-js"
+      ng-app="gpquery"
+      lang="en">
+
+  <head>
+
+
+
+
+    <!-- Essential Head Tags
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge, chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title ng-bind="($title || 'Home') + ' · GPQuery'" ng-cloak>GPQuery</title>
+
+    <base href="/">
+
+
+
+
+    <!-- Metadata & Link Tags
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+    <meta name="application-name" content="GPQuery">
+    <meta name="description" content="Data visualisation and statistical analysis dashboard for Grand Prix Racing records since 1950">
+
+    <!-- TODO: humans.txt -->
+    <link rel="author" href="humans.txt">
+
+
+
+
+    <!-- Favicons
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="/assets/icons/favicon/favicon-32x32.png?v=f0rMU140n3" sizes="32x32">
+    <link rel="icon" type="image/png" href="/assets/icons/favicon/favicon-16x16.png?v=f0rMU140n3" sizes="16x16">
+    <link rel="manifest" href="/assets/icons/favicon/manifest.json?v=f0rMU140n3">
+    <link rel="mask-icon" href="/assets/icons/favicon/safari-pinned-tab.svg?v=f0rMU140n3" color="#014225">
+    <link rel="shortcut icon" href="favicon.ico">
+    <meta name="apple-mobile-web-app-title" content="GPQuery">
+    <meta name="application-name" content="GPQuery">
+    <meta name="msapplication-config" content="/assets/icons/favicon/browserconfig.xml?v=f0rMU140n3">
+    <meta name="theme-color" content="#014225">
+
+
+
+
+    <!-- Inject Styles & Modernizr
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+    <!-- build:css({.tmp/serve,client}) styles/vendor.css -->
+    <!-- bower:css -->
+    <!-- run `gulp inject` to automatically populate bower styles dependencies -->
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:css({.tmp/serve,client}) styles/app.css -->
+    <!-- inject:css -->
+    <!-- css files will be automatically insert here -->
+    <!-- endinject -->
+    <!-- endbuild -->
+
+    <!-- build:js(client) scripts/modernizr.js -->
+    <script src="../bower_components/modernizr/modernizr.js"></script>
+    <!-- endbuild -->
+
+
+
+
+  </head>
+
+  <body ng-class="$bodyClass || 'site-default'">
+
+
+
+
+
+
+
+
+    <!-- —————————————————————————————————————————————————
+    ————  START: Body Content                         ————
+    —————————————————————————————————————————————————— -->
+
+
+    <!--[if lt IE 10]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <div ui-view></div>
+
+
+    <!-- —————————————————————————————————————————————————
+    ————  ENDOF: Body Content                         ————
+    —————————————————————————————————————————————————— -->
+
+
+
+
+
+
+
+
+    <!-- Google Analytics
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      // TODO: Replace with Google Analytics key
+      ga('create', 'GA-12345678-9', 'auto');
+      ga('send', 'pageview');
+    </script>
+
+
+
+
+    <!-- Inject Scripts & Angular Templates
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+    <!-- build:js(client) scripts/vendor.js -->
+    <!-- bower:js -->
+    <!-- run `gulp inject` to automatically populate bower script dependencies -->
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:js({.tmp/serve,.tmp/partials,client}) scripts/app.js -->
+    <!-- inject:js -->
+    <!-- js files will be automatically insert here -->
+    <!-- endinject -->
+
+    <!-- inject:partials -->
+    <!-- angular templates will be automatically converted in js and inserted here -->
+    <!-- endinject -->
+    <!-- endbuild -->
+
+
+
+
+  </body>
+</html>
