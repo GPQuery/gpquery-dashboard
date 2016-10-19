@@ -1,3 +1,27 @@
+@charset 'UTF-8';
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400italic,700,700italic);
+
+
+
+
+/* 1. Variables, Functions, and Mixins
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+// @import 'styles/utilities/variables';
+// @import 'styles/utilities/functions';
+// @import 'styles/utilities/mixins';
+
+// TODO: Refactor code into Sass partials
+$font-family-base: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Verdana, sans-serif;
+
+/* ––––––––––––––––––––––––––––––––––––––––––––––– */
+
+
+
+
+/* 2. Vendors Styles
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
 /**
  *  Do not remove the comment below. It's the markers used by wiredep to inject
  *  sass dependencies when defined in the bower.json of your dependencies
@@ -5,7 +29,52 @@
 // bower:scss
 // endbower
 
-@import url(http://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Roboto:400,700,700italic,400italic);
+/* ––––––––––––––––––––––––––––––––––––––––––––––– */
+
+
+
+
+/* 3. Base Styles
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+// @import 'styles/base/base';
+// @import 'styles/base/fonts';
+// @import 'styles/base/typography';
+// @import 'styles/base/helpers';
+
+// TODO: Refactor code into Sass partials
+html, body {
+  height: 100%;
+  position: relative;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-touch-callout: none;
+  min-height: 100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: $font-family-base;
+  overflow-x: hidden;
+  overflow-y: auto;
+  margin: 0;
+  padding-right: 0;
+  padding-left: 0;
+  padding-bottom: 0;
+  width: 100%;
+}
+
+[tabindex='-1'] {
+  &:focus {
+    outline: none;
+  }
+}
+
+
+//  Material Icons
+// ------------------------------
 
 @font-face {
   font-family: 'Material Icons';
@@ -31,23 +100,50 @@
   text-transform: none;
   letter-spacing: normal;
   word-wrap: normal;
-
-  /* Support for all WebKit browsers. */
-  -webkit-font-smoothing: antialiased;
-  /* Support for Safari and Chrome. */
-  text-rendering: optimizeLegibility;
-
-  /* Support for Firefox. */
-  -moz-osx-font-smoothing: grayscale;
-
-  /* Support for IE. */
-  font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;  // Support for all WebKit browsers.
+  text-rendering: optimizeLegibility;   // Support for Safari and Chrome.
+  -moz-osx-font-smoothing: grayscale;   // Support for Firefox.
+  font-feature-settings: 'liga';        // Support for IE.
 }
 
-html {
-  font-family: 'Roboto Slab', serif;
-}
+/* ––––––––––––––––––––––––––––––––––––––––––––––– */
 
+
+
+
+/* 4. Layout-Related Styles
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+// @import 'styles/layout/header';
+// @import 'styles/layout/footer';
+// @import 'styles/layout/sidenav';
+// @import 'styles/layout/forms';
+
+/* ––––––––––––––––––––––––––––––––––––––––––––––– */
+
+
+
+
+/* 5. Component Stylesheets
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+/**
+ *  Do not remove the comment below. It's the markers used by gulp-inject to inject
+ *  all your sass files automatically
+ */
+// injector
+// endinjector
+
+/* ––––––––––––––––––––––––––––––––––––––––––––––– */
+
+
+
+
+/* 6. Page-Specific Styles
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+// TODO: Refactor code into Sass partials
+// TODO: Remove Yeoman generated code
 [layout=row] {
   flex-direction: row;
 }
@@ -90,9 +186,12 @@ section.jumbotron {
   }
 }
 
-/**
- *  Do not remove the comment below. It's the markers used by gulp-inject to inject
- *  all your sass files automatically
- */
-// injector
-// endinjector
+/* ––––––––––––––––––––––––––––––––––––––––––––––– */
+
+
+
+
+/* 7. Themes
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+/* ––––––––––––––––––––––––––––––––––––––––––––––– */
