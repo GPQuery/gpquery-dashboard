@@ -128,7 +128,7 @@
    * ```
    */
   /** @ngInject */
-  function routerRunBlock($timeout, $rootScope, $state, $stateParams) {
+  function routerRunBlock($log, $timeout, $rootScope, $state, $stateParams) {
 
 
     //  Set reference to `$state` & `$stateParams`
@@ -149,6 +149,13 @@
         $rootScope.$title     = title;
         $rootScope.$bodyClass = bodyClass;
       });
+
+      $log.info('------------------------');
+      $log.info('UI-ROUTER DEBUG INFO:');
+      $log.info('$state.current.name:', $state.current.name);
+      $log.info('$stateParams:', $stateParams);
+      $log.info('$state.$current.url.source:', $state.$current.url.source);
+      $log.info('------------------------');
 
     });
 
