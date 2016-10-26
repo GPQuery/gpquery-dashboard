@@ -8,9 +8,8 @@
       //  Common/Core Modules
       // ------------------------------
 
-      'gpquery.core'
-
-      // 'gpquery.components'
+      'gpquery.core',
+      'gpquery.components'
       // 'gpquery.widgets'
 
       //  Feature Areas

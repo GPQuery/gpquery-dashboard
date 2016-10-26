@@ -2,7 +2,7 @@
   'use strict';
 
   angular
-    .module('gpquery')
+    .module('gpquery.components')
     .directive('acmeMalarkey', acmeMalarkey);
 
   /** @ngInject */
