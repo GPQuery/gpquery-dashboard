@@ -10,12 +10,13 @@
 
       'gpquery.core',
       'gpquery.components',
-      'gpquery.widgets'
+      'gpquery.widgets',
+
 
       //  Feature Areas
       // ------------------------------
 
-      // 'gpquery.dashboard'
+      'gpquery.dashboard'
 
     ]);
 
