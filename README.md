@@ -14,6 +14,10 @@ This project was generated with the [Gulp-Angular generator][yo-gulp-ng].
 
 ## Getting Started
 
+Install the [Zenhub][zenhub] extension for Chrome, which extends the base functionality provided by GitHub's issue tracking.
+
+Read about the [Gitflow][gitflow] workflow.
+
 
 ### Prerequisites
 
@@ -72,6 +76,8 @@ gulp protractor
 
 
 
+[zenhub]:https://www.zenhub.com/
+[gitflow]:https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow
 
 [ergast]:http://ergast.com/mrd/
 [license-nc-sa]:http://creativecommons.org/licenses/by-nc-sa/3.0/
