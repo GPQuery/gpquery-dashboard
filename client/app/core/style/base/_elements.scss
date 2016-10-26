@@ -1,0 +1,38 @@
+//  Base > Elements
+// ------------------------------
+// This file contains styles for HTML elements and
+// pseudo-classes
+
+html, body {
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+  overflow-y: auto;
+  margin: 0;
+  padding-right: 0;
+  padding-left: 0;
+  padding-bottom: 0;
+  width: 100%;
+}
+
+// Force all DOM elements to inherit from parent box-sizing.
+//
+// @see https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+/**
+ * Basic styles for links
+ */
+a {
+  color: $brand-color;
+  text-decoration: none;
+
+  @include on-event {
+    color: $text-color;
+    text-decoration: underline;
+  }
+}

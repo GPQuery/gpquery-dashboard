@@ -1,0 +1,38 @@
+//  Base > Fonts
+// ------------------------------
+// This file contains all `@font-face` declarations
+// and related styles
+
+
+//  Material Icons
+// ------------------------------
+
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../../bower_components/material-design-iconfont/iconfont/MaterialIcons-Regular.eot); /* For IE6-8 */
+  src: local('Material Icons'),
+       local('MaterialIcons-Regular'),
+       url(../../bower_components/material-design-iconfont/iconfont/MaterialIcons-Regular.woff2) format('woff2'),
+       url(../../bower_components/material-design-iconfont/iconfont/MaterialIcons-Regular.woff) format('woff'),
+       url(../../bower_components/material-design-iconfont/iconfont/MaterialIcons-Regular.ttf) format('truetype');
+}
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;  /* Preferred icon size */
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  -webkit-font-smoothing: antialiased;  // Support for all WebKit browsers.
+  text-rendering: optimizeLegibility;   // Support for Safari and Chrome.
+  -moz-osx-font-smoothing: grayscale;   // Support for Firefox.
+  font-feature-settings: 'liga';        // Support for IE.
+}
