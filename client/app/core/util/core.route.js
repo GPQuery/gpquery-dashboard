@@ -2,27 +2,53 @@
   'use strict';
 
   angular
-    .module('gpquery')
-    .run(configRunBlock)
+    .module('gpquery.core')
+    .config(routerConfig)
     .run(routerRunBlock);
 
   /** @ngInject */
-  function configRunBlock($rootScope, $window) {
+  function routerConfig($stateProvider, $locationProvider, $urlRouterProvider) {
 
 
-    //  Set `$rootScope` Values
-    // ------------------------------
-
-    $rootScope.app = {
-      name: 'Joho',
-      viewAnimation: 'ng-fadeInUp'
-    };
 
 
-    //  Set reference to localStorage
-    // ------------------------------
+    /* State Configurations
+    –––––––––––––––––––––––––––––––––––––––––––––––––– */
+    $stateProvider
+      .state('home', {
+        url:          '/',
+        templateUrl:  'app/dashboard/pages/main/main.html',
+        controller:   'MainController',
+        controllerAs: 'main',
+        resolve: {
+          $title: function() {
+            return 'Main';
+          },
+          $bodyClass: function() {
+            return 'main-page';
+          },
+          data: function(webDevTec) {
+            return webDevTec.getTec();
+          }
+        }
+      });
 
-    $rootScope.$storage = $window.localStorage;
+
+
+
+    /* URL Router Configurations
+    –––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+    $urlRouterProvider.otherwise('/');
+
+
+
+
+    /* HTML5 Mode
+    –––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+    $locationProvider.html5Mode(true);
+
 
   }
 
@@ -102,7 +128,7 @@
    * ```
    */
   /** @ngInject */
-  function routerRunBlock($timeout, $rootScope, $state, $stateParams) {
+  function routerRunBlock($log, $timeout, $rootScope, $state, $stateParams) {
 
 
     //  Set reference to `$state` & `$stateParams`
@@ -123,6 +149,13 @@
         $rootScope.$title     = title;
         $rootScope.$bodyClass = bodyClass;
       });
+
+      $log.info('------------------------');
+      $log.info('UI-ROUTER DEBUG INFO:');
+      $log.info('$state.current.name:', $state.current.name);
+      $log.info('$stateParams:', $stateParams);
+      $log.info('$state.$current.url.source:', $state.$current.url.source);
+      $log.info('------------------------');
 
     });
 

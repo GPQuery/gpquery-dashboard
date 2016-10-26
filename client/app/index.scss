@@ -4,15 +4,29 @@
 
 
 
-/* 1. Variables, Functions, and Mixins
+/* 1. Variables, Helpers, and Theming
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
-// @import 'styles/utilities/variables';
-// @import 'styles/utilities/functions';
-// @import 'styles/utilities/mixins';
+/**
+ * These are configuration and helper partials, i.e. global
+ * variables, mixins, functions, and placeholders.
+ *
+ * Theme configuration can be found in the partial
+ * `variables/_theming.scss`.
+ *
+ * None of the code in these files should output any CSS
+ * when compiled.
+ *
+ * Contents of the `_mixins.scss` and `_functions.scss`
+ * partials may be further split into additional files if
+ * necessary later on down the road.
+ *
+ * @see https://sass-guidelin.es/#abstracts-folder
+ */
 
-// TODO: Refactor code into Sass partials
-$font-family-base: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Verdana, sans-serif;
+@import 'core/style/variables/variables';
+
+@import 'core/style/utilities/utilities';
 
 /* ––––––––––––––––––––––––––––––––––––––––––––––– */
 
@@ -23,11 +37,20 @@ $font-family-base: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Verdana, sans
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 /**
- *  Do not remove the comment below. It's the markers used by wiredep to inject
- *  sass dependencies when defined in the bower.json of your dependencies
+ * Do not remove the comments in this section.
+ * They are markers used by `wiredep` to inject dependencies
+ * as defined in `bower.json`.
  */
+
 // bower:scss
 // endbower
+
+/**
+ * Vendors styles are found in their respective directories
+ * under `bower_components/`.
+ * They are injected by `wiredep` automatically, so
+ * there's no need to `@import` them manually.
+ */
 
 /* ––––––––––––––––––––––––––––––––––––––––––––––– */
 
@@ -37,74 +60,15 @@ $font-family-base: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Verdana, sans
 /* 3. Base Styles
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
-// @import 'styles/base/base';
-// @import 'styles/base/fonts';
-// @import 'styles/base/typography';
-// @import 'styles/base/helpers';
+/**
+ * This is boilerplate code for the project, including
+ * typographic rules, standard HTML element styles,
+ * resets, and animations.
+ *
+ * @see https://sass-guidelin.es/#base-folder
+ */
 
-// TODO: Refactor code into Sass partials
-html, body {
-  height: 100%;
-  position: relative;
-  -webkit-tap-highlight-color: rgba(0,0,0,0);
-  -webkit-touch-callout: none;
-  min-height: 100%;
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-body {
-  font-family: $font-family-base;
-  overflow-x: hidden;
-  overflow-y: auto;
-  margin: 0;
-  padding-right: 0;
-  padding-left: 0;
-  padding-bottom: 0;
-  width: 100%;
-}
-
-[tabindex='-1'] {
-  &:focus {
-    outline: none;
-  }
-}
-
-
-//  Material Icons
-// ------------------------------
-
-@font-face {
-  font-family: 'Material Icons';
-  font-style: normal;
-  font-weight: 400;
-  src: url(../../bower_components/material-design-iconfont/iconfont/MaterialIcons-Regular.eot); /* For IE6-8 */
-  src: local('Material Icons'),
-       local('MaterialIcons-Regular'),
-       url(../../bower_components/material-design-iconfont/iconfont/MaterialIcons-Regular.woff2) format('woff2'),
-       url(../../bower_components/material-design-iconfont/iconfont/MaterialIcons-Regular.woff) format('woff'),
-       url(../../bower_components/material-design-iconfont/iconfont/MaterialIcons-Regular.ttf) format('truetype');
-}
-
-.material-icons {
-  font-family: 'Material Icons';
-  font-weight: normal;
-  font-style: normal;
-  font-size: 24px;  /* Preferred icon size */
-  display: inline-block;
-  width: 1em;
-  height: 1em;
-  line-height: 1;
-  text-transform: none;
-  letter-spacing: normal;
-  word-wrap: normal;
-  -webkit-font-smoothing: antialiased;  // Support for all WebKit browsers.
-  text-rendering: optimizeLegibility;   // Support for Safari and Chrome.
-  -moz-osx-font-smoothing: grayscale;   // Support for Firefox.
-  font-feature-settings: 'liga';        // Support for IE.
-}
+@import 'core/style/base/base';
 
 /* ––––––––––––––––––––––––––––––––––––––––––––––– */
 
@@ -114,10 +78,18 @@ body {
 /* 4. Layout-Related Styles
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
-// @import 'styles/layout/header';
-// @import 'styles/layout/footer';
-// @import 'styles/layout/sidenav';
-// @import 'styles/layout/forms';
+/**
+ * Here are the layout-related stylesheets.
+ *
+ * Styles for individual layout components are found in
+ * their espective directories and injected by
+ * `gulp-inject` automatically in section #6, so there's
+ * no need to `@import` them manually.
+ *
+ * @see https://sass-guidelin.es/#layout-folder
+ */
+
+@import 'core/style/layout/layout';
 
 /* ––––––––––––––––––––––––––––––––––––––––––––––– */
 
@@ -128,11 +100,11 @@ body {
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 /**
- *  Do not remove the comment below. It's the markers used by gulp-inject to inject
- *  all your sass files automatically
+ * Components styles are found in their respective
+ * directories.  They are injected by `gulp-inject`
+ * automatically in section #6, so there's no need to
+ * `@import` them manually.
  */
-// injector
-// endinjector
 
 /* ––––––––––––––––––––––––––––––––––––––––––––––– */
 
@@ -142,56 +114,20 @@ body {
 /* 6. Page-Specific Styles
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
-// TODO: Refactor code into Sass partials
-// TODO: Remove Yeoman generated code
-[layout=row] {
-  flex-direction: row;
-}
+/**
+ * Do not remove the comments in this section.
+ * They are markers used by `gulp-inject` to inject the Sass
+ * files for Layouts, Components, and Pages automatically.
+ */
 
-.browsehappy {
-  margin: 0.2em 0;
-  background: #ccc;
-  color: #000;
-  padding: 0.2em 0;
-}
+// injector
+// endinjector
 
-md-toolbar.md-default-theme {
-  background-color: black;
-}
-
-section.jumbotron {
-  margin-bottom: 30px;
-  padding: 1px 30px;
-  background-color: #5aadbb;
-  text-align: center;
-
-  color: white;
-
-  h1 {
-    font-size: 3em;
-  }
-}
-
-.techs {
-  display: flex;
-  flex-flow: row wrap;
-
-  md-card {
-    width: 30%;
-
-    img.pull-right {
-      float: right;
-      width: 100px;
-    }
-  }
-}
-
-/* ––––––––––––––––––––––––––––––––––––––––––––––– */
-
-
-
-
-/* 7. Themes
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
+/**
+ * Page-specific styles are found in their respective
+ * directories.  They are injected above by `gulp-inject`
+ * automatically, so there's no need to `@import` them
+ * manually.
+ */
 
 /* ––––––––––––––––––––––––––––––––––––––––––––––– */

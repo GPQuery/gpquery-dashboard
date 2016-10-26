@@ -2,7 +2,7 @@
   'use strict';
 
   angular
-    .module('gpquery')
+    .module('gpquery.core')
     .config(config);
 
   /** @ngInject */
