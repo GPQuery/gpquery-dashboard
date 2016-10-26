@@ -9,8 +9,8 @@
       // ------------------------------
 
       'gpquery.core',
-      'gpquery.components'
-      // 'gpquery.widgets'
+      'gpquery.components',
+      'gpquery.widgets'
 
       //  Feature Areas
       // ------------------------------
