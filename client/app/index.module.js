@@ -5,28 +5,18 @@
     .module('gpquery', [
 
 
-      //  AngularJS Modules
+      //  Common/Core Modules
       // ------------------------------
 
-      'ngAnimate',
-      'ngAria',
-      'ngCookies',
-      'ngMaterial',
-      'ngMessages',
-      'ngResource',
-      'ngSanitize',
+      'gpquery.core'
 
+      // 'gpquery.components'
+      // 'gpquery.widgets'
 
-      //  Reusable Feature Modules
+      //  Feature Areas
       // ------------------------------
 
-
-
-      //  3rd Party Modules
-      // ------------------------------
-
-      'ui.router',
-      'toastr'
+      // 'gpquery.dashboard'
 
     ]);
 

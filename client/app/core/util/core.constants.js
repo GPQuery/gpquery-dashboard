@@ -3,7 +3,7 @@
   'use strict';
 
   angular
-    .module('gpquery')
+    .module('gpquery.core')
     .constant('malarkey', malarkey)
     .constant('moment', moment);
 

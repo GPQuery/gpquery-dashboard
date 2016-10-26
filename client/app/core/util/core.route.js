@@ -2,27 +2,53 @@
   'use strict';
 
   angular
-    .module('gpquery')
-    .run(configRunBlock)
+    .module('gpquery.core')
+    .config(routerConfig)
     .run(routerRunBlock);
 
   /** @ngInject */
-  function configRunBlock($rootScope, $window) {
+  function routerConfig($stateProvider, $locationProvider, $urlRouterProvider) {
 
 
-    //  Set `$rootScope` Values
-    // ------------------------------
-
-    $rootScope.app = {
-      name: 'Joho',
-      viewAnimation: 'ng-fadeInUp'
-    };
 
 
-    //  Set reference to localStorage
-    // ------------------------------
+    /* State Configurations
+    –––––––––––––––––––––––––––––––––––––––––––––––––– */
+    $stateProvider
+      .state('home', {
+        url:          '/',
+        templateUrl:  'app/main/main.html',
+        controller:   'MainController',
+        controllerAs: 'main',
+        resolve: {
+          $title: function() {
+            return 'Main';
+          },
+          $bodyClass: function() {
+            return 'main-page';
+          },
+          data: function(webDevTec) {
+            return webDevTec.getTec();
+          }
+        }
+      });
 
-    $rootScope.$storage = $window.localStorage;
+
+
+
+    /* URL Router Configurations
+    –––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+    $urlRouterProvider.otherwise('/');
+
+
+
+
+    /* HTML5 Mode
+    –––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+    $locationProvider.html5Mode(true);
+
 
   }
 
