@@ -11,11 +11,10 @@
       'ngAnimate',
       'ngAria',
       'ngCookies',
-      'ngSanitize',
-      'ngTouch',
       'ngMaterial',
       'ngMessages',
       'ngResource',
+      'ngSanitize',
 
 
       //  Reusable Feature Modules
