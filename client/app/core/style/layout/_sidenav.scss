@@ -1,0 +1,71 @@
+//  Modules > Sidenav
+// ------------------------------
+// @link https://github.com/angular/material/blob/master/src/components/sidenav/sidenav.scss
+
+$sidenav-width:         245px;
+
+$sidenav-bg:            #ffffff;
+$sidenav-header-bg:     $sidenav-bg;
+$sidenav-header-border: #cfcfcf;
+$sidenav-footer-bg:     rgba(0, 0, 0, 0.87);
+
+
+md-sidenav.gp-sidenav {
+
+  background: $sidenav-bg;
+  position: relative;
+  min-height: 100%;
+
+  max-width: $sidenav-width;
+  min-width: $sidenav-width;
+  width: $sidenav-width;
+
+  > * {
+    min-width: $sidenav-width - 54px;
+  }
+
+  .nav-header {
+    background-color: $sidenav-header-bg;
+    border-bottom: 1px solid $sidenav-header-border;
+    flex-shrink: 0;
+    margin-top: -8px;
+  }
+
+  .nav-content {
+    background: transparent;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+  .nav-footer {
+    background: $sidenav-footer-bg;
+    position: absolute;
+    bottom: 0;
+    max-width: $sidenav-width - 0.5px;
+  }
+}
+
+.nav-logo {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 0 16px;
+  margin: 0 auto;
+
+  &:focus {
+    outline: none;
+  }
+
+  > img {
+    height: 80px;
+    width: auto;
+    display: block;
+    transform-origin: 50% 0;
+    transform: scale(1.2);
+  }
+}
+
+a.nav-logo {
+  border-bottom: none;
+}

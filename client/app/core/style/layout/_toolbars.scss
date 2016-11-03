@@ -1,0 +1,20 @@
+//  Modules > Toolbar
+// ------------------------------
+// @link https://github.com/angular/material/blob/master/src/components/toolbar/toolbar.scss
+
+$toolbar-bg:              rgba(0, 0, 0, 0.87);
+
+md-toolbar,
+body.gpquery md-toolbar,
+gp-shell md-toolbar {
+  &,
+  &.gp-toolbar,
+  &.nav-toolbar,
+  &.site-toolbar  {
+    background-color: $toolbar-bg;
+    .md-toolbar-tools,
+    .md-toolbar-tools-bottom {
+      background-color: transparent;
+    }
+  }
+}
