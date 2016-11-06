@@ -33,7 +33,7 @@
       url       : "/overview",
       iconType  : "fa",
       iconValue : "fa-tachometer",
-      childSections: []
+      pages: []
     });
 
 
@@ -51,7 +51,7 @@
       url       : "/seasons",
       iconType  : "fa",
       iconValue : "fa-calendar",
-      childSections: [
+      pages: [
         {
           id        : "races",
           title     : "Race Schedule",
@@ -102,7 +102,7 @@
       url       : "/races",
       iconType  : "fa",
       iconValue : "fa-flag-checkered",
-      childSections: [
+      pages: [
         {
           id        : "detail",
           title     : "Race Overview",
@@ -122,7 +122,7 @@
           url       : "/circuits",
           iconType  : "fa",
           iconValue : "fa-location-arrow",
-          childSections: [
+          pages: [
           ]
         },
         {
@@ -185,7 +185,7 @@
       url       : "/drivers",
       iconType  : "fa",
       iconValue : "fa-user",
-      childSections: [
+      pages: [
         {
           id        : "overview",
           title     : "Driver Overview",
@@ -236,7 +236,7 @@
       url       : "/constructors",
       iconType  : "fa",
       iconValue : "fa-users",
-      childSections: [
+      pages: [
         {
           id        : "overview",
           title     : "Constructor Overview",
@@ -287,7 +287,7 @@
       url       : "/standings",
       iconType  : "fa",
       iconValue : "fa-trophy",
-      childSections: [
+      pages: [
         {
           id        : "drivers",
           title     : "Drivers",

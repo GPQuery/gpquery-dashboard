@@ -6,20 +6,26 @@
     .controller('ShellController', ShellController);
 
   /** @ngInject */
-  function ShellController($rootScope, $mdSidenav, $log) {
+  function ShellController($rootScope, $mdSidenav, $log, Data) {
     var vm = this;
     var navId = 'left';
 
-    vm.navLinks = [];
+    vm.sections = [];
 
-    vm.toggleSidenav = toggleSidenav;
-    vm.sidenavIsOpen = sidenavIsOpen;
+    vm.toggleSidenav  = toggleSidenav;
+    vm.sidenavIsOpen  = sidenavIsOpen;
+    vm.navigateTo     = navigateTo;
 
     activate();
 
     function activate() {
-      vm.navLinks = $rootScope.app.sections;
-      $log.info('Resolved in ShellController:', vm.navLinks);
+      Data.getSections().$promise.then(function(response) {
+        $log.info('Activated.', response);
+        vm.sections = response.sections;
+      }, function(errorMsg) {
+        $log.error('Error.', errorMsg);
+      });
+      $log.info('Resolved in ShellController:', vm.sections);
     }
 
     function toggleSidenav() {
@@ -30,6 +36,10 @@
 
     function sidenavIsOpen() {
       return $mdSidenav(navId).isOpen();
+    }
+
+    function navigateTo(url, event) {
+      $log.info('ShellController - navigateTo(' + url + ')', event);
     }
 
   }
