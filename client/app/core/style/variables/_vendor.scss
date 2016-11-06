@@ -2,7 +2,28 @@
 // ------------------------------
 // This file contains variables pertaining to vendor CSS
 
-$md-layout-breakpoint-xs:         600px !default;
-$md-layout-breakpoint-sm:         960px !default;
-$md-layout-breakpoint-md:         1280px !default;
-$md-layout-breakpoint-lg:         1920px !default;
+
+//  ngMaterial Variables
+// ------------------------------
+
+$md-layout-breakpoint-xs:             600px !default;
+$md-layout-breakpoint-sm:             960px !default;
+$md-layout-breakpoint-md:             1280px !default;
+$md-layout-breakpoint-lg:             1920px !default;
+
+/**
+ * Do not change these variable values.  They are
+ * taken directly from the Angular-Material source.
+ *
+ * @todo Create Sass utilities to handle toolbar sizing
+ * @link https://github.com/angular/material/blob/master/src/components/toolbar/toolbar.scss
+ */
+
+$md-toolbar-height:                   64px !default;
+$md-toolbar-medium-tall-height:       88px !default;
+$md-toolbar-tall-height:              128px !default;
+$md-toolbar-height-mobile-portrait:   56px !default;
+$md-toolbar-height-mobile-landscape:  48px !default;
+$md-toolbar-indent-margin:            64px !default;
+$md-toolbar-padding:                  16px !default;
+//$icon-button-margin-offset:           rem(-0.800) !default;

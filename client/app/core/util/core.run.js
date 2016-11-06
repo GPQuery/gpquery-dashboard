@@ -64,7 +64,7 @@
         },
         {
           id        : "driverStandings",
-          title     : "Drivers' Standings",
+          title     : "Driver Standings",
           linkClass : "inactive",
           tooltip   : "Season Driver Championship Standings",
           type      : "link",
@@ -74,7 +74,7 @@
         },
         {
           id        : "constructorStandings",
-          title     : "Constructors' Standings",
+          title     : "Constructor Standings",
           linkClass : "inactive",
           tooltip   : "Season Constructor Championship Standings",
           type      : "link",
@@ -105,13 +105,25 @@
       childSections: [
         {
           id        : "detail",
-          title     : "Detail",
+          title     : "Race Overview",
           linkClass : "inactive",
-          tooltip   : "Race Detail",
+          tooltip   : "Race Overview",
           type      : "link",
-          url       : "/detail",
+          url       : "/overview",
           iconType  : "fa",
           iconValue : "fa-area-chart"
+        },
+        {
+          id        : "circuits",
+          title     : "Circuits",
+          linkClass : "inactive",
+          tooltip   : "Circuit information",
+          type      : "category",
+          url       : "/circuits",
+          iconType  : "fa",
+          iconValue : "fa-location-arrow",
+          childSections: [
+          ]
         },
         {
           id        : "results",
@@ -152,18 +164,6 @@
           url       : "/pitStops",
           iconType  : "fa",
           iconValue : "fa-wrench"
-        },
-        {
-          id        : "circuits",
-          title     : "Circuits",
-          linkClass : "inactive",
-          tooltip   : "Circuit information",
-          type      : "category",
-          url       : "/circuits",
-          iconType  : "fa",
-          iconValue : "fa-location-arrow",
-          childSections: [
-          ]
         }
       ]
     });
@@ -187,12 +187,22 @@
       iconValue : "fa-user",
       childSections: [
         {
-          id        : "detail",
-          title     : "Detail",
+          id        : "overview",
+          title     : "Driver Overview",
           linkClass : "inactive",
-          tooltip   : "Driver Detail",
+          tooltip   : "Driver Overview",
           type      : "link",
-          url       : "/detail",
+          url       : "/overview",
+          iconType  : "fa",
+          iconValue : "fa-id-card-o"
+        },
+        {
+          id        : "statistics",
+          title     : "Driver Statistics",
+          linkClass : "inactive",
+          tooltip   : "Driver Statistics",
+          type      : "link",
+          url       : "/stats",
           iconType  : "fa",
           iconValue : "fa-id-card-o"
         },
@@ -228,12 +238,22 @@
       iconValue : "fa-users",
       childSections: [
         {
-          id        : "detail",
-          title     : "Detail",
+          id        : "overview",
+          title     : "Constructor Overview",
           linkClass : "inactive",
-          tooltip   : "Constructor Detail",
+          tooltip   : "Constructor Overview",
           type      : "link",
-          url       : "/detail",
+          url       : "/overview",
+          iconType  : "fa",
+          iconValue : "fa-id-card-o"
+        },
+        {
+          id        : "statistics",
+          title     : "Constructor Statistics",
+          linkClass : "inactive",
+          tooltip   : "Constructor Statistics",
+          type      : "link",
+          url       : "/stats",
           iconType  : "fa",
           iconValue : "fa-id-card-o"
         },
@@ -260,7 +280,7 @@
 
     $rootScope.app.sections.push({
       id        : "standings",
-      title     : "Championship Standings",
+      title     : "Standings",
       linkClass : "inactive",
       tooltip   : "World Championship Standings",
       type      : "category",

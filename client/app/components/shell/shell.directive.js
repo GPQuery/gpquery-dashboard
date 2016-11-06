@@ -12,7 +12,7 @@
       scope: {},
       templateUrl: 'app/components/shell/shell.html',
       controller: 'ShellController',
-      controllerAs: 'vm'
+      controllerAs: 'shell'
     };
 
     return directive;

@@ -1,9 +1,10 @@
+//- -----------------------------
 //- Sidenav
 //- -----------------------------
 
 md-sidenav.gp-sidenav.md-sidenav-left.md-whiteframe-glow-z1(
   md-component-id="left"
-  md-is-locked-open="$mdMedia('gt-md')"
+  md-is-locked-open="$mdMedia('gt-sm')"
 )
 
 
@@ -14,11 +15,12 @@ md-sidenav.gp-sidenav.md-sidenav-left.md-whiteframe-glow-z1(
     .md-toolbar-tools
       span(flex)
       md-button.md-icon-button(
-        ng-click="vm.toggleSidenav()"
-        hide-gt-md
+        ng-click="shell.toggleSidenav()"
+        hide-gt-sm
         aria-label="Toggle Sidenav"
       )
-        md-icon.material-icons menu
+        md-icon.material-icons(ng-if="shell.sidenavIsOpen()") close
+        md-icon.material-icons(ng-if="!shell.sidenavIsOpen()") menu
     .md-toolbar-tools.md-toolbar-tools-bottom
       span(flex)
 
@@ -30,8 +32,21 @@ md-sidenav.gp-sidenav.md-sidenav-left.md-whiteframe-glow-z1(
     flex
     role="navigation"
   )
+    md-list
+      md-subheader.md-no-sticky Subheader
+      md-list-item(ng-repeat="link in shell.navLinks")
+        p {{link.title}}
+
+//- End Sidenav -----------------
 
 
+
+
+
+
+
+
+//- -----------------------------
 //- Site Main
 //- -----------------------------
 
@@ -44,11 +59,11 @@ main.gp-main(
   //- Site Toolbar
   //- -----------------------------
 
-  md-toolbar.main-toolbar.md-whiteframe-z2
+  md-toolbar.gp-toolbar.md-whiteframe-z2
     .md-toolbar-tools
       md-button.md-icon-button(
-        ng-click="vm.toggleSidenav()"
-        hide-gt-md
+        ng-click="shell.toggleSidenav()"
+        hide-gt-sm
         aria-label="Toggle Sidenav"
       )
         md-icon.material-icons menu
@@ -61,3 +76,5 @@ main.gp-main(
     flex
     ui-view
   )
+
+//- End Site Main ---------------
