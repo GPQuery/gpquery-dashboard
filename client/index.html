@@ -75,30 +75,24 @@
 
   </head>
 
-  <body ng-class="$bodyClass || 'site-default'">
-
-
-
-
-
-
-
-
-    <!-- —————————————————————————————————————————————————
-    ————  START: Body Content                         ————
-    —————————————————————————————————————————————————— -->
+  <body ng-class="$bodyClass || 'site-default'" class="gpquery">
 
 
     <!--[if lt IE 10]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-    <div ui-view></div>
 
 
-    <!-- —————————————————————————————————————————————————
-    ————  ENDOF: Body Content                         ————
+
+
+
+
+
+    <!-- ROOT SHELL COMPONENT
     —————————————————————————————————————————————————— -->
+
+    <gp-shell></gp-shell>
 
 
 
