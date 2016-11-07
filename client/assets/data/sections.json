@@ -21,16 +21,6 @@
       "iconValue": "fa-calendar",
       "pages": [
         {
-          "id": "races",
-          "title": "Race Schedule",
-          "linkClass": "inactive",
-          "tooltip": "Season Race Schedules",
-          "type": "link",
-          "url": "/races",
-          "iconType": "fa",
-          "iconValue": "fa-flag-checkered"
-        },
-        {
           "id": "driverStandings",
           "title": "Driver Standings",
           "linkClass": "inactive",
@@ -63,16 +53,6 @@
       "iconValue": "fa-flag-checkered",
       "pages": [
         {
-          "id": "detail",
-          "title": "Race Overview",
-          "linkClass": "inactive",
-          "tooltip": "Race Overview",
-          "type": "link",
-          "url": "/overview",
-          "iconType": "fa",
-          "iconValue": "fa-area-chart"
-        },
-        {
           "id": "circuits",
           "title": "Circuits",
           "linkClass": "inactive",
@@ -81,16 +61,6 @@
           "url": "/circuits",
           "iconType": "fa",
           "iconValue": "fa-location-arrow"
-        },
-        {
-          "id": "results",
-          "title": "Race Results",
-          "linkClass": "inactive",
-          "tooltip": "Race Results",
-          "type": "link",
-          "url": "/results",
-          "iconType": "fa",
-          "iconValue": "fa-flag-checkered"
         },
         {
           "id": "qualifying",
@@ -132,29 +102,7 @@
       "type": "category",
       "url": "/drivers",
       "iconType": "fa",
-      "iconValue": "fa-user",
-      "pages": [
-        {
-          "id": "overview",
-          "title": "Driver Overview",
-          "linkClass": "inactive",
-          "tooltip": "Driver Overview",
-          "type": "link",
-          "url": "/overview",
-          "iconType": "fa",
-          "iconValue": "fa-id-card-o"
-        },
-        {
-          "id": "statistics",
-          "title": "Driver Statistics",
-          "linkClass": "inactive",
-          "tooltip": "Driver Statistics",
-          "type": "link",
-          "url": "/stats",
-          "iconType": "fa",
-          "iconValue": "fa-id-card-o"
-        }
-      ]
+      "iconValue": "fa-user"
     },
     {
       "id": "constructors",
@@ -164,61 +112,7 @@
       "type": "category",
       "url": "/constructors",
       "iconType": "fa",
-      "iconValue": "fa-users",
-      "pages": [
-        {
-          "id": "overview",
-          "title": "Constructor Overview",
-          "linkClass": "inactive",
-          "tooltip": "Constructor Overview",
-          "type": "link",
-          "url": "/overview",
-          "iconType": "fa",
-          "iconValue": "fa-id-card-o"
-        },
-        {
-          "id": "statistics",
-          "title": "Constructor Statistics",
-          "linkClass": "inactive",
-          "tooltip": "Constructor Statistics",
-          "type": "link",
-          "url": "/stats",
-          "iconType": "fa",
-          "iconValue": "fa-id-card-o"
-        }
-      ]
-    },
-    {
-      "id": "standings",
-      "title": "Standings",
-      "linkClass": "inactive",
-      "tooltip": "World Championship Standings",
-      "type": "category",
-      "url": "/standings",
-      "iconType": "fa",
-      "iconValue": "fa-trophy",
-      "pages": [
-        {
-          "id": "drivers",
-          "title": "Drivers",
-          "linkClass": "inactive",
-          "tooltip": "Drivers' Championship Standings",
-          "type": "link",
-          "url": "/drivers",
-          "iconType": "fa",
-          "iconValue": "fa-user"
-        },
-        {
-          "id": "constructors",
-          "title": "Constructors",
-          "linkClass": "inactive",
-          "tooltip": "Constructors' Championship Standings",
-          "type": "link",
-          "url": "/constructors",
-          "iconType": "fa",
-          "iconValue": "fa-users"
-      }
-    ]
-  }
+      "iconValue": "fa-users"
+    }
   ]
 }

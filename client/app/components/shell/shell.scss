@@ -1,13 +1,28 @@
+/* Variables
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+$list-item-height:              32px;
+$list-item-button-height:       24px;
+$section-list-item-margin-top:  6px;
+
+/* End Variables ––––––––––––––––––––––––––––––––– */
+
+
+
+
+/* Shell Styles
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
 gp-shell {
+
   flex-direction: row;
   display: flex;
 
   .gp-main {
     overflow: hidden;
     position: relative;
-
-
   }
+
   .gp-main {
 
     // Padding to account for fixed-top toolbar
@@ -19,8 +34,68 @@ gp-shell {
       padding-top: $md-toolbar-height-mobile-landscape;
     }
   }
+
 }
 
-.section-list-item p {
-  font-weight: bold;
+/* End Shell Styles –––––––––––––––––––––––––––––– */
+
+
+
+
+/* Sidenav List Styles
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.section-list-item,
+.page-list-item {
+
+  min-height: $list-item-height;
+  .md-list-item-inner {
+    height: $list-item-height;
+    min-height: $list-item-height;
+  }
+  .md-button {
+    min-height: $list-item-button-height;
+  }
+  p {
+    line-height: $list-item-button-height;
+  }
+
 }
+
+
+//  Section Item
+// ------------------------------
+
+.section-list-item {
+
+  margin-top: $section-list-item-margin-top;
+  &:first-child {
+    margin-top: $section-list-item-margin-top * 1.5;
+  }
+  .md-button {
+    .md-list-item-inner {
+      p {
+        font-weight: bold;
+      }
+    }
+  }
+
+}
+
+
+//  Responsive Spacing
+// ------------------------------
+
+@media (min-width: 0) and (max-width: $md-layout-breakpoint-sm - 1) {
+
+  .section-list-item {
+    margin-top: $section-list-item-margin-top * 0.75;
+    &:first-child {
+      margin-top: $section-list-item-margin-top;
+    }
+  }
+
+}
+
+/* End Sidenav List Styles ––––––––––––––––––––––– */
+

@@ -37,10 +37,10 @@ md-sidenav.gp-sidenav.md-sidenav-left.md-whiteframe-glow-z1(
         md-tooltip {{ section.tooltip }}
         p {{ section.title }}
       //-md-subheader.md-no-sticky {{section.title}}
-      md-list-item(
+      md-list-item.page-list-item(
         ng-if="section.pages"
         ng-repeat="page in section.pages"
-        ng-click="shell.navigateTo(page.url, $event)"
+        ng-click="shell.navigateTo(section.url + page.url, $event)"
       )
         md-tooltip {{ page.tooltip }}
         p {{ page.title }}
