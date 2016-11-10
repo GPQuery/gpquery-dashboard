@@ -1,0 +1,118 @@
+{
+  "sections": [
+    {
+      "id": "overview",
+      "title": "Overview",
+      "linkClass": "inactive",
+      "tooltip": "Current Season & Last Race",
+      "type": "link",
+      "url": "/overview",
+      "iconType": "fa",
+      "iconValue": "fa-tachometer"
+    },
+    {
+      "id": "seasons",
+      "title": "Seasons",
+      "linkClass": "inactive",
+      "tooltip": "Season Details & Race Schedules",
+      "type": "category",
+      "url": "/seasons",
+      "iconType": "fa",
+      "iconValue": "fa-calendar",
+      "pages": [
+        {
+          "id": "driverStandings",
+          "title": "Driver Standings",
+          "linkClass": "inactive",
+          "tooltip": "Season Driver Championship Standings",
+          "type": "link",
+          "url": "/driverStandings",
+          "iconType": "fa",
+          "iconValue": "fa-trophy"
+        },
+        {
+          "id": "constructorStandings",
+          "title": "Constructor Standings",
+          "linkClass": "inactive",
+          "tooltip": "Season Constructor Championship Standings",
+          "type": "link",
+          "url": "/constructorStandings",
+          "iconType": "fa",
+          "iconValue": "fa-trophy"
+        }
+      ]
+    },
+    {
+      "id": "races",
+      "title": "Races",
+      "linkClass": "inactive",
+      "tooltip": "Grand Prix Details & Circuit Information",
+      "type": "category",
+      "url": "/races",
+      "iconType": "fa",
+      "iconValue": "fa-flag-checkered",
+      "pages": [
+        {
+          "id": "circuits",
+          "title": "Circuits",
+          "linkClass": "inactive",
+          "tooltip": "Circuit information",
+          "type": "category",
+          "url": "/circuits",
+          "iconType": "fa",
+          "iconValue": "fa-location-arrow"
+        },
+        {
+          "id": "qualifying",
+          "title": "Qualifying",
+          "linkClass": "inactive",
+          "tooltip": "Qualifying Results (2003 onwards)",
+          "type": "link",
+          "url": "/qualifying",
+          "iconType": "fa",
+          "iconValue": "fa-sort-numeric-asc"
+        },
+        {
+          "id": "lapTimes",
+          "title": "Lap Times",
+          "linkClass": "inactive",
+          "tooltip": "Lap Time Data (1996 onwards)",
+          "type": "link",
+          "url": "/lapTimes",
+          "iconType": "fa",
+          "iconValue": "fa-clock-o"
+        },
+        {
+          "id": "pitStops",
+          "title": "Pit Stops",
+          "linkClass": "inactive",
+          "tooltip": "Pit Stop Data (2012 onwards)",
+          "type": "link",
+          "url": "/pitStops",
+          "iconType": "fa",
+          "iconValue": "fa-wrench"
+        }
+      ]
+    },
+    {
+      "id": "drivers",
+      "title": "Drivers",
+      "linkClass": "inactive",
+      "tooltip": "Drivers statistics",
+      "type": "category",
+      "url": "/drivers",
+      "iconType": "fa",
+      "iconValue": "fa-user"
+    },
+    {
+      "id": "constructors",
+      "title": "Constructors",
+      "linkClass": "inactive",
+      "tooltip": "Constructors statistics",
+      "type": "category",
+      "url": "/constructors",
+      "iconType": "fa",
+      "iconValue": "fa-users"
+    }
+  ]
+}

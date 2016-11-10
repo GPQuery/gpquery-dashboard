@@ -32,10 +32,18 @@ md-sidenav.gp-sidenav.md-sidenav-left.md-whiteframe-glow-z1(
     flex
     role="navigation"
   )
-    md-list
-      md-subheader.md-no-sticky Subheader
-      md-list-item(ng-repeat="link in shell.navLinks")
-        p {{link.title}}
+    md-list.md-dense(ng-repeat="section in shell.sections")
+      md-list-item.section-list-item(ng-click="shell.navigateTo(section.url, $event)")
+        md-tooltip {{ section.tooltip }}
+        p {{ section.title }}
+      //-md-subheader.md-no-sticky {{section.title}}
+      md-list-item.page-list-item(
+        ng-if="section.pages"
+        ng-repeat="page in section.pages"
+        ng-click="shell.navigateTo(section.url + page.url, $event)"
+      )
+        md-tooltip {{ page.tooltip }}
+        p {{ page.title }}
 
 //- End Sidenav -----------------
 
