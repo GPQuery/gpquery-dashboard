@@ -39,16 +39,12 @@ gp-shell md-toolbar {
 /* Main Toolbar
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
-.gp-main,
-[role="main"],
-main.gp-main {
-
-  md-toolbar.gp-toolbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-  }
+md-toolbar.gp-toolbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
 }
+
 
 /* ––––––––––––––––––––––––––––––––––––––––––––––– */
