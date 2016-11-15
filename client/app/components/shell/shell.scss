@@ -22,12 +22,12 @@ gp-shell {
   max-height: 100%;
 
   // Padding to account for fixed-top toolbar
-  padding-top: $md-toolbar-height;
+  //padding-top: $md-toolbar-height;
   @media (min-width: 0) and (max-width: $md-layout-breakpoint-sm - 1) and (orientation: portrait) {
-    padding-top: $md-toolbar-height-mobile-portrait;
+    //padding-top: $md-toolbar-height-mobile-portrait;
   }
   @media (min-width: 0) and (max-width: $md-layout-breakpoint-sm - 1) and (orientation: landscape) {
-    padding-top: $md-toolbar-height-mobile-landscape;
+    //padding-top: $md-toolbar-height-mobile-landscape;
   }
 
   .gp-main {
@@ -104,3 +104,18 @@ gp-shell {
 
 /* End Sidenav List Styles ––––––––––––––––––––––– */
 
+
+
+
+/* Footer
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+#license-footer {
+  align-self: flex-end;
+  border-top: 1px solid #ddd;
+  padding: 16px 32px 24px;
+  width: 100%;
+  text-align: center;
+}
+
+/* End Footer –––––––––––––––––––––––––––––––––––– */

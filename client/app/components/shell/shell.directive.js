@@ -3,10 +3,10 @@
 
   angular
     .module('gpquery.components')
-    .directive('gpShell', gpShell);
+    .directive('gpShell', gpShellDirective);
 
   /** @ngInject */
-  function gpShell() {
+  function gpShellDirective() {
     var directive = {
       restrict: 'E',
       scope: {},
