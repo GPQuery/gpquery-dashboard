@@ -8,7 +8,7 @@
 /* Toolbar Variables
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
-$toolbar-bg:              rgba(0, 0, 0, 0.87);
+$toolbar-bg:              rgba(0, 0, 0, 0.82);
 
 /* End Variables ––––––––––––––––––––––––––––––––– */
 
@@ -40,10 +40,10 @@ gp-shell md-toolbar {
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 md-toolbar.gp-toolbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
+  //position: fixed;
+  //top: 0;
+  //left: 0;
+  //right: 0;
 }
 
 
