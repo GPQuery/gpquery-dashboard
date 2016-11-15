@@ -16,6 +16,8 @@ md-sidenav.gp-sidenav.md-sidenav-left.md-whiteframe-glow-z1(md-component-id="lef
   md-toolbar.nav-toolbar.md-tall.md-whiteframe-z5
     .md-toolbar-tools
       span(flex)
+      h1.md-headline(hide-sm) GPQuery
+      span(flex)
       md-button.md-icon-button(
         ng-click="shell.toggleSidenav()"
         hide-gt-sm
@@ -29,7 +31,7 @@ md-sidenav.gp-sidenav.md-sidenav-left.md-whiteframe-glow-z1(md-component-id="lef
   //- Sidenav Content
   //- -----------------------------
 
-  md-content.nav-content(flex, role="navigation", layout="column")
+  md-content.nav-content(md-scroll-y, flex, role="navigation", layout="column", layout-fill)
     md-list.md-dense(ng-repeat="section in shell.sections")
       md-list-item.section-list-item(ng-click="shell.navigateTo(section.url, $event)")
         md-tooltip {{ section.tooltip }}
@@ -64,6 +66,21 @@ main.gp-main(layout="column", tabIndex="-1", role="main", flex)
       md-button.md-icon-button(ng-click="shell.toggleSidenav()", hide-gt-sm, aria-label="Toggle Sidenav")
         md-icon.material-icons menu
 
+      h1.md-headline(hide-gt-sm) GPQuery
+
+      span(flex)
+
+      //- Search Button
+      md-button.md-icon-button()
+        md-icon.material-icons search
+
+      //- Top-Left Buttons
+      md-button.md-icon-button()
+        md-icon.material-icons share
+      md-button.md-icon-button()
+        md-icon.material-icons account_circle
+      md-button.md-icon-button()
+        md-icon.material-icons more_vert
 
   //- Site Content
   //- -----------------------------

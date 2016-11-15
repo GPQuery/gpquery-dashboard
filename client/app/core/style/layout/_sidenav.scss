@@ -4,11 +4,17 @@
 
 $sidenav-width:         245px;
 
-$sidenav-bg:            #ffffff;
+$sidenav-bg:            transparent;
+$sidenav-content-bg:    rgba(255, 255, 255, 1.00);
+$sidenav-toolbar-bg:    rgba(0, 0, 0, 0.87); //rgba(34, 43, 47, 0.87);
 $sidenav-header-bg:     $sidenav-bg;
 $sidenav-header-border: #cfcfcf;
-$sidenav-footer-bg:     rgba(0, 0, 0, 0.87);
 
+
+
+
+/* Sidenav Styles
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 md-sidenav.gp-sidenav {
 
@@ -19,6 +25,7 @@ md-sidenav.gp-sidenav {
   max-width: $sidenav-width;
   min-width: $sidenav-width;
   width: $sidenav-width;
+  overflow: hidden;
 
   > * {
     min-width: $sidenav-width - 54px;
@@ -31,17 +38,16 @@ md-sidenav.gp-sidenav {
     margin-top: -8px;
   }
 
-  .nav-content {
-    background: transparent;
-    overflow-x: hidden;
-    overflow-y: auto;
+  .nav-toolbar {
+    background-color: $sidenav-toolbar-bg;
+    .md-toolbar-tools,
+    .md-toolbar-tools-bottom {
+      background-color: transparent;
+    }
   }
 
-  .nav-footer {
-    background: $sidenav-footer-bg;
-    position: absolute;
-    bottom: 0;
-    max-width: $sidenav-width - 0.5px;
+  .nav-content {
+    background: $sidenav-content-bg;
   }
 }
 
