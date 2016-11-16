@@ -4,3 +4,140 @@
 
 $text-color: #000;
 $brand-color: #014225;
+
+$background-1:            rgba(0, 0, 0, 0.87);
+$background-2:            rgba(0, 0, 0, 0.70);
+$background-3:            rgba(0, 0, 0, 0.54);
+$background-4:            rgba(0, 0, 0, 0.38);
+$background-5:            rgba(0, 0, 0, 0.12);
+
+// -----------------------------------------------------------------------------
+//  Global Variables
+// -----------------------------------------------------------------------------
+
+
+
+
+/*  Colours - Theme
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+// Greys
+// ------------------------------
+
+$greys: (
+  #4a4a4a,
+  #808080,
+  #b0b0b0,
+);
+
+$theme-green:   #222b2f;
+$theme-grey-3:  #363636;
+$theme-grey-4:  #4a4a4a;
+$theme-grey-5:  #505050;
+$theme-grey-6:  #5a5a5a;
+$theme-grey-7:  #747474;
+$theme-grey-8:  #808080;
+$theme-grey-9:  #999;
+$theme-grey-10: #aaa;
+$theme-grey-11: #b0b0b0;
+$theme-grey-12: #ccc;
+$theme-grey-13: #ededed;
+$theme-black:   #000;
+$theme-white:   #fff;
+
+
+
+// Constructors
+// ------------------------------
+
+$team-mer: #2ab4a5;
+$team-rbr: #4f1aab;
+$team-mcl: #808080;
+$team-wil: #ffffff;
+$team-sfi: #ff5f0f;
+$team-fer: #c30000;
+$team-str: #0005c1;
+$team-lot: #ffb800;
+$team-sau: #0063ff;
+$team-mar: #6e0000;
+$team-cat: #006c00;
+
+$team-colors: (
+  mer: $team-mer,
+  rbr: $team-rbr,
+  mcl: $team-mcl,
+  wil: $team-wil,
+  sfi: $team-sfi,
+  fer: $team-fer,
+  str: $team-str,
+  lot: $team-lot,
+  sau: $team-sau,
+  mar: $team-mar,
+  cat: $team-cat,
+);
+
+/* ––––––––––––––––––––––––––––––––––––––––––––––– */
+
+
+
+
+/*  Colours - Boards
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+// Rows
+// ------------------------------
+
+$board-text:          rgba(255, 255, 255, 1.00);  // Table Foreground Colour
+$board-bg:            rgba( 36,  36,  36, 1.00);  // Table Row Background Colour (#242424)
+$board-bg-alt:        rgba( 50,  50,  50, 1.00);  // Alternate Background Colour (#323232)
+$board-bg-hover:      rgba( 80,  80,  80, 1.00);  // Hover Background Colour (#505050)
+
+
+// Cells
+// ------------------------------
+
+// Yellow Positive Gap Text
+// Green Negative Gap Text
+// Pit Stop Red [PIT]
+
+
+// Labels
+// ------------------------------
+
+// Safety Car
+// Red Flag
+$label-tr:            #14be96;  // Team Radio Foreground
+
+
+// Tyres
+// ------------------------------
+
+// Super Soft (Red)
+// Soft (Yellow)
+// Medium (Purple)
+// Hard
+
+
+// Theme Colours
+// ------------------------------
+
+$theme-red:   #e12826;
+$theme-green: #222b2f;
+
+
+// Live Timing Colours
+// ------------------------------
+
+$lt-background:       #242424;  // rgb(36, 36, 36)
+$lt-background-alt:   #323232;  // rgb(50, 50, 50)
+$lt-background-hover: #505050;  // rgb(80, 80, 80)
+// #525252
+// rgb(115, 115, 115)
+// rgb(170, 170, 170)
+$lt-cell-foreground:  #ffffff;
+
+$lt-text-green:       #14be96;  // rgb(20,190,150)
+$lt-text-yellow:      #ffff00;  // rgb(255,255,0)
+$lt-text-red:         #ff0000;  // rgb(255, 0, 0)
+
+/* ––––––––––––––––––––––––––––––––––––––––––––––– */
