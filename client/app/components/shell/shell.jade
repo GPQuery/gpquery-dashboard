@@ -1,15 +1,4 @@
-//- -----------------------------
-//- Site Toolbar
-//- -----------------------------
 
-md-toolbar.gp-toolbar.md-whiteframe-z2
-  .md-toolbar-tools
-    md-button.md-icon-button(
-      ng-click="shell.toggleSidenav()"
-      hide-gt-sm
-      aria-label="Toggle Sidenav"
-    )
-      md-icon.material-icons menu
 
 
 
@@ -18,11 +7,7 @@ md-toolbar.gp-toolbar.md-whiteframe-z2
 //- Sidenav
 //- -----------------------------
 
-md-sidenav.gp-sidenav.md-sidenav-left.md-whiteframe-glow-z1(
-  md-component-id="left"
-  md-is-locked-open="$mdMedia('gt-sm')"
-  layout="column"
-)
+md-sidenav.gp-sidenav.md-sidenav-left.md-whiteframe-glow-z1(md-component-id="left", md-is-locked-open="$mdMedia('gt-sm')")
 
 
   //- Sidenav Toolbar
@@ -30,6 +15,8 @@ md-sidenav.gp-sidenav.md-sidenav-left.md-whiteframe-glow-z1(
 
   md-toolbar.nav-toolbar.md-tall.md-whiteframe-z5
     .md-toolbar-tools
+      span(flex)
+      h1.md-headline(hide-sm) GPQuery
       span(flex)
       md-button.md-icon-button(
         ng-click="shell.toggleSidenav()"
@@ -44,20 +31,13 @@ md-sidenav.gp-sidenav.md-sidenav-left.md-whiteframe-glow-z1(
   //- Sidenav Content
   //- -----------------------------
 
-  md-content.nav-content(
-    flex
-    role="navigation"
-    layout="column"
-  )
+  md-content.nav-content(md-scroll-y, flex, role="navigation", layout="column", layout-fill)
     md-list.md-dense(ng-repeat="section in shell.sections")
       md-list-item.section-list-item(ng-click="shell.navigateTo(section.url, $event)")
         md-tooltip {{ section.tooltip }}
         p {{ section.title }}
       //-md-subheader.md-no-sticky {{section.title}}
-      md-list-item.page-list-item(
-        ng-if="section.pages"
-        ng-repeat="page in section.pages"
-        ng-click="shell.navigateTo(section.url + page.url, $event)"
+      md-list-item.page-list-item(ng-if="section.pages", ng-repeat="page in section.pages", ng-click="shell.navigateTo(section.url + page.url, $event)"
       )
         md-tooltip {{ page.tooltip }}
         p {{ page.title }}
@@ -75,18 +55,42 @@ md-sidenav.gp-sidenav.md-sidenav-left.md-whiteframe-glow-z1(
 //- Site Main
 //- -----------------------------
 
-main.gp-main(
-  tabIndex="-1"
-  role="main"
-  ui-view
-)
+main.gp-main(layout="column", tabIndex="-1", role="main", flex)
 
+
+  //- Site Toolbar
+  //- -----------------------------
+
+  md-toolbar.gp-toolbar.md-whiteframe-z2
+    .md-toolbar-tools
+      md-button.md-icon-button(ng-click="shell.toggleSidenav()", hide-gt-sm, aria-label="Toggle Sidenav")
+        md-icon.material-icons menu
+
+      h1.md-headline(hide-gt-sm) GPQuery
+
+      span(flex)
+
+      //- Search Button
+      md-button.md-icon-button()
+        md-icon.material-icons search
+
+      //- Top-Left Buttons
+      md-button.md-icon-button()
+        md-icon.material-icons share
+      md-button.md-icon-button()
+        md-icon.material-icons account_circle
+      md-button.md-icon-button()
+        md-icon.material-icons more_vert
 
   //- Site Content
   //- -----------------------------
 
-  //-md-content.main-content(
-    flex
-    ui-view)
+  md-content.main-content(md-scroll-y, layout="column", flex)
+    .main-content-inner(ui-view, layout-padding, flex="noshrink")
+    .main-content-footer(layout="row", layout-align="center center", flex="noshrink")
+      #license-footer(flex)
+        | Copyright © 2014–2016 ·
+        a.md-accent(ng-href="https://github.com/GPQuery")
+          |  GPQuery
 
 //- End Site Main ---------------
